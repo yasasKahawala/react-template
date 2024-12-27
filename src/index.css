@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Stetica";
+    src: url("/static/fonts/stetica-regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Stetica";
+    src: url("/static/fonts/stetica-regular.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Stetica";
+    src: url("/static/fonts/stetica-medium.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Stetica";
+    src: url("/static/fonts/stetica-bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Stetica";
+    src: url("/static/fonts/stetica-bolder.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html {
+    font-family: "Stetica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    @apply bg-light-bg text-light-on-bg dark:bg-dark-bg dark:text-dark-on-bg;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01875rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-light-on-bg dark:text-dark-on-bg font-bold;
+  }
+
+  p {
+    @apply text-light-on-bg dark:text-dark-on-bg;
+  }
+
+  a {
+    @apply underline;
+  }
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  @apply duration-500;
+}
+
+.slide-left-leave-active,
+.slide-right-enter-from {
+  @apply -translate-x-full scale-75 opacity-0;
+}
+
+.slide-left-enter-from,
+.slide-right-leave-active {
+  @apply translate-x-full scale-75 opacity-0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s linear;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: 0.3s;
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translate(0, 100%);
+}
